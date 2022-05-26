@@ -23,19 +23,19 @@ def round1(teams):
 	
 def round2(teams):
 	if teams == 16:
-	    # The top two teams will be picked from each group
-        # After that tournament structure will be as follow
-        #1. ROUND OF 16
-        #2. QUARTER FINAL
-        #3. SEMI FINAL
-        #4. FINAL
+		# The top two teams will be picked from each group
+		# After that tournament structure will be as follow
+		#1. ROUND OF 16
+		#2. QUARTER FINAL
+		#3. SEMI FINAL
+		#4. FINAL
 		return 8 + 4 + 2 + 1
 	elif teams == 8:
-	    # The top team will be picked from each group
-        # After that tournament structure will be as follow
-        #1. QUARTER FINAL
-        #2. SEMI FINAL
-        #3. FINAL
+		# The top team will be picked from each group
+		# After that tournament structure will be as follow
+		#1. QUARTER FINAL
+		#2. SEMI FINAL
+		#3. FINAL
 		return  2 + 1
 	else:
 	    # The top team will be picked from both groups
