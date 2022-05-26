@@ -3,7 +3,8 @@ def round1(teams):
         no_of_groups = 8
     elif teams < 24 and teams >= 8:
         no_of_groups = 4
-
+    else:
+        no_of_groups = 2
     temp = teams//no_of_groups
     rem = teams%no_of_groups
 
@@ -29,24 +30,30 @@ def round2(teams):
         #3. SEMI FINAL
         #4. FINAL
 		return 8 + 4 + 2 + 1
-	else:
+	elif teams == 8:
 	    # The top team will be picked from each group
         # After that tournament structure will be as follow
         #1. QUARTER FINAL
         #2. SEMI FINAL
         #3. FINAL
 		return  2 + 1
+	else:
+	    # The top team will be picked from both groups
+        # After that tournament structure will be as follow
+        #1. FINAL
+	    return 1
 		
 N = int(input("Enter Number of teams: "))
-if N <= 4:
+if N < 4:
     # One on One matches
     # If number of teams > 2, A final between top two teams
+    if N==1:
+        matches = 0
     if N==2:
-        print(1)
+        matches = 1
     if N==3:
-        print(4)
-    if N==4:
-        print(7)
+        matches = 4
 else:
     matches = round1(N)
-    print(matches)
+
+print("No of matches in the tournament: {}".format(matches))
