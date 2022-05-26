@@ -1,7 +1,7 @@
 def round1(teams):
     if teams >= 24:
         no_of_groups = 8
-    else:
+    elif teams < 24 and teams >= 8:
         no_of_groups = 4
 
     temp = teams//no_of_groups
@@ -41,6 +41,7 @@ N = int(input("Enter Number of teams: "))
 if N <= 4:
     # One on One matches
     # If number of teams > 2, A final between top two teams
+    if 
     if N==2:
         print(1)
     if N==3:
