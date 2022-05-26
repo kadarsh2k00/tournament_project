@@ -41,7 +41,6 @@ N = int(input("Enter Number of teams: "))
 if N <= 4:
     # One on One matches
     # If number of teams > 2, A final between top two teams
-    if 
     if N==2:
         print(1)
     if N==3:
