@@ -5,12 +5,12 @@ def round1(teams):
         no_of_groups = 4
     else:
         no_of_groups = 2
+	
     temp = teams//no_of_groups
     rem = teams%no_of_groups
 
-    # Number of teams in each group
+    # Number of teams in each group will be stored in group_list
     group_list = [temp]*no_of_groups
-
     for i in range(rem):
         group_list[i] += 1
 
@@ -33,14 +33,13 @@ def round2(teams):
 	elif teams == 8:
 		# The top team will be picked from each group
 		# After that tournament structure will be as follow
-		#1. QUARTER FINAL
-		#2. SEMI FINAL
-		#3. FINAL
+		#1. SEMI FINAL
+		#2. FINAL
 		return  2 + 1
 	else:
 	    # The top team will be picked from both groups
-        # After that tournament structure will be as follow
-        #1. FINAL
+	    # After that tournament structure will be as follow
+	    #1. FINAL
 	    return 1
 		
 N = int(input("Enter Number of teams: "))
